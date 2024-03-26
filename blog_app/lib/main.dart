@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:blog_app/features/auth/presentation/pages/sinup_page.dart';
 
+import 'core/theme/theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,11 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Blog App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:  SinUpPagState(),
+      theme: AppTheme.darkThemeMode,
+      home:  const SinUpPagState(),
     );
   }
 }
